@@ -40,7 +40,7 @@ function CountryDetails() {
 
     // Navigate to the country detail page when a border country is clicked
     const handleBorderClick = (borderCountryName) => {
-        navigate(`/country/${borderCountryName}`);
+        navigate(`/rest-countries-api/country/${borderCountryName}`);
     };
 
     // Check if country and nativeName are defined

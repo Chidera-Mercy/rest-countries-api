@@ -64,12 +64,12 @@ function App() {
 
   const handleSearch = (searchValue) => {
     setSearchTerm(searchValue);
-    navigate(`/?search=${searchValue}&region=${regionFilter}`);
+    navigate(`/rest-countries-api/?search=${searchValue}&region=${regionFilter}`);
   };
 
   const handleRegionFilter = (regionValue) => {
     setRegionFilter(regionValue);
-    navigate(`/?search=${searchTerm}&region=${regionValue}`);
+    navigate(`/rest-countries-api/?search=${searchTerm}&region=${regionValue}`);
   };
 
   // Show loading or error state
@@ -86,7 +86,7 @@ function App() {
   return (
     <>
       <Navbar />
-      {location.pathname === '/' && (
+      {location.pathname === '/rest-countries-api/' && (
         <div className='searchbar-filter'>
           <Searchbar onSearch={handleSearch} searchValue={searchTerm} />
           <Filter onRegionSelect={handleRegionFilter} selectedRegion={regionFilter} />
@@ -94,14 +94,14 @@ function App() {
       )}
       <Routes>
         <Route 
-          path="/"
+          path="/rest-countries-api/"
           element={
             <div className='country-grid'>
               {countryElements}
             </div>
           }
         />
-        <Route path="/country/:countryName" element={<CountryDetailApp />} />
+        <Route path="/rest-countries-api/country/:countryName" element={<CountryDetailApp />} />
       </Routes>
     </>
   );

@@ -4,7 +4,7 @@ function Card(props) {
     const navigate = useNavigate();
 
     const countryDetail = () => {
-        navigate(`/country/${props.attribute.name.common}`);
+        navigate(`/rest-countries-api/country/${props.attribute.name.common}`);
     };
     
     return (
