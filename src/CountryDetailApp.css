@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.back-button {
+    display: flex;
+    align-items: center;
+    background-color: inherit;
+    color: inherit;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 3rem;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+}
+  
+.back-button svg {
+    margin-right: 8px;
+}
+.back-button:hover {
+    transform: scale(1.05);
+}
+
+.country-details-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem;
+    align-items: center;
+}
+
+.country-details-flag {
+    width: 40%;
+    max-width: 500px;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.country-details-info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+
+.country-details-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.country-details-left,
+.country-details-right {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    max-width: 50%;
+}
+
+.country-borders {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.country-details-columns h4 {
+    font-weight: 700;
+}
+
+.country-details-name {
+    font-weight: 700;
+}
+.country-detail-light {
+    font-weight: 450;
+}
+
+.border-button {
+    background-color: inherit;
+    color: inherit;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.border-button:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .country-details-container, .country-details-columns {
+        flex-direction: column;
+    }
+
+    .country-details-flag, .country-details-info {
+        width: 100%;
+        
+    }
+
+    .country-details-name {
+        margin-top: 2rem;
+    }
+
+    .country-details-right {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+}
